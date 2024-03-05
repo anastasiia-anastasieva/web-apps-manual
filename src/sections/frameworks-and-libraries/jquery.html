@@ -1,0 +1,48 @@
+<section class="subdivisions">
+    <header>
+        <h1>jQuery</h1>
+        <p>Query - популярна JavaScript бібліотека для спрощення роботи з DOM, подіями, AJAX запитами та іншим.</p>
+        <img src="./assets/images/jquery-js.png" alt="jquery" class="editor-image">
+    </header>
+    <article>
+        <h2>Основи jQuery</h2>
+        <p>Щоб почати використовувати jQuery потрібно підключити бібліотеку:</p>
+        <pre><code>&lt;script src="https://code.jquery.com/jquery-3.6.0.min.js"&gt;&lt;/script&gt;</code></pre>
+        <p>Далі можна вибирати елементи за допомогою функції $():</p>
+        <pre>
+<code>$('button'); // вибір за селектором
+$('#submit'); // вибір за ID</code></pre>
+    </article>
+
+    <article>
+        <h2>Робота з елементами</h2>
+        <p>jQuery надає широкі можливості:</p>
+        <pre><code>$('p').hide(); // приховати елементи
+$('h1').css('color', 'red'); // задати CSS стиль
+$('form').submit(function() {}); // подія на формі</code></pre>
+    </article>
+
+    <article>
+        <h2>AJAX запити</h2>
+        <p>Для відправки AJAX запитів використовується функція $.ajax() або спеціалізовані методи:</p>
+        <pre><code>$.get('/api/users', data => {
+  // callback функція
+});</code></pre>
+        <p>jQuery значно спрощує JavaScript розробку за рахунок зручного інтерфейсу для роботи з DOM та подіями.</p>
+    </article>
+
+    <article>
+        <h2>Практичне завдання</h2>
+        <ul>
+            <li><p>Підключіть бібліотеку jQuery до HTML документа</p></li>
+            <li><p>Використовуючи jQuery селектори, отримайте елемент з ID "content" та елементи класу "paragraph"</p></li>
+            <li><p>За допомогою jQuery приховайте або покажіть якийсь блок на сторінці</p></li>
+            <li><p>Змініть колір фону для деяких елементів за допомогою методу css()</p></li>
+            <li><p>Додайте клас для виділення парних елементів списку, використовуючи метод addClass()</p></li>
+            <li><p>Реалізуйте слайдер з зображеннями, що змінюються при кліках на кнопки "Next"/"Prev"</p></li>
+            <li><p>Зробіть ajax запит і виведіть JSON дані із сервера в якийсь блок на сторінці</p></li>
+            <li><p>Додайте анімацію за допомогою методів animate() або fadeOut()</p></li>
+            <li><p>Обробіть подію submit на формі та виведіть дані форми</p></li>
+        </ul>
+    </article>
+</section>

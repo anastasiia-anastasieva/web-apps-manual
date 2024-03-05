@@ -1,0 +1,59 @@
+<section class="subdivisions">
+    <header>
+        <h1>Створення форм</h1>
+    </header>
+    <article>
+        <p>HTML форми дозволяють збирати дані від користувачів для подальшої обробки на сервері.
+            Форма створюється за допомогою тегу &lt;form&gt;:</p>
+        <pre><code>&lt;form action="/handling-form.php" method="post"&gt;
+&lt;/form&gt;</code></pre>
+        <p>Атрибут action вказує куди надсилатимуться дані форми, method - метод надсилання (get або post).</p>
+    </article>
+
+    <article>
+        <h2>Елементи форми</h2>
+        <p>Всередині форми додаються елементи для вводу даних. Наприклад:</p>
+        <ul>
+            <li><p>&lt;input&gt; - різні типи полів вводу</p></li>
+            <li><p>&lt;textarea&gt; - багаторядкове текстове поле</p></li>
+            <li><p>&lt;select&gt; - випадаючий список</p></li>
+        </ul>
+        <p>Приклад форми з полями для імені, email, повідомлення та кнопкою відправки:</p>
+        <pre><code>
+&lt;form action="/submit-form.php" method="post"&gt;
+    &lt;label for="name"&gt;Ім'я:&lt;/label&gt;
+    &lt;input type="text" id="name" name="name"&gt;
+    &lt;label for="email"&gt;Email:&lt;/label&gt;
+    &lt;input type="email" id="email" name="email"&gt;
+    &lt;label for="message"&gt;Повідомлення:&lt;/label&gt;
+    &lt;textarea id="message" name="message"&gt;&lt;/textarea&gt;
+    &lt;input type="submit" value="Відправити"&gt;
+&lt;/form&gt;
+        </code></pre>
+        <p>Таким чином можна створювати різноманітні форми для збору корисної інформації від відвідувачів сайту.</p>
+    </article>
+
+    <article>
+        <h2>Практичне завдання</h2>
+        <p>Щоб краще зрозуміти роботу з HTML формами, спробуйте виконати наступне:</p>
+        <ul>
+            <li><p>Створіть HTML сторінку та додайте форму з атрибутами action і method</p></li>
+            <li><p>Додайте поле для введення імені та email:</p></li>
+            <pre><code>&lt;label&gt;Ім'я&lt;/label&gt;
+&lt;input type="text" name="username"&gt;
+
+&lt;label&gt;Email&lt;/label&gt;
+&lt;input type="email" name="email"&gt;</code></pre>
+            <li><p>Створіть текстову область для введення повідомлення:</p></li>
+            <pre><code>&lt;label&gt;Повідомлення&lt;/label&gt;
+&lt;textarea name="message"&gt;&lt;/textarea&gt;</code></pre>
+            <li><p>Додайте checkbox для згоди на обробку даних:</p></li>
+            <pre><code>&lt;input type="checkbox" name="consent"&gt;
+&lt;label&gt;Я згоден з обробкою моїх даних&lt;/label&gt;</code></pre>
+            <li><p>Додайте кнопку відправки форми:</p></li>
+            <pre><code>&lt;input type="submit" value="Відправити"&gt;</code></pre>
+            <li><p>Перевірте роботу форми, заповнивши її та натиснувши на кнопку.</p></li>
+            <li><p>Спробуйте додати інші типи полів, такі як radio, select, дата.</p></li>
+        </ul>
+    </article>
+</section>

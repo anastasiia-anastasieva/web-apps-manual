@@ -1,0 +1,326 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Анімація для фону */
+}
+
+nav ul li a:hover {
+    background-color: #555; /* Темний фон для наведеного посилання */
+}
+
+nav ul li a.active {
+    background-color: #1abc9c; /* Особливий фон для активного посилання */
+}
+
+
+main {
+    flex: 1;
+    padding: 10px;
+}
+
+.highlighted {
+    animation: highlight 2s ease-out;
+}
+
+/*для карток в розділі*/
+.container .card {
+    flex-basis: calc(25% - 20px); /* Контроль ширини карточки */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* М'яка тінь для глибини */
+    border-radius: 10px; /* Злегка округлені кути */
+    transition: transform 0.3s ease; /* Плавний перехід для наведення */
+    flex-grow: 1;
+    margin: 10px; /* Додатковий відступ між карточками */
+    overflow: hidden; /* Запобігає виходу контенту за межі карточки */
+    background-color: #fff; /* Білий фон для контрасту */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Піднімає карточку при наведенні */
+}
+
+.card h3 {
+    margin: 0;
+    background: #f0f0f0; /* Світлий фон для заголовка */
+    padding: 15px; /* Відступи для заголовка */
+    font-size: 1.1em; /* Невелике збільшення шрифта для заголовка */
+}
+
+.card p {
+    padding: 12px; /* Відступи для опису */
+    font-size: 1em; /* Збільшення шрифта для опису */
+    line-height: 1.5; /* Покращення міжрядкового інтервалу */
+    color: #333; /* Темніший колір для кращої читабельності */
+    height: calc(100% - 60px); /* Встановлення висоти для узгодження з висотою заголовка */
+    overflow: hidden; /* Обрізання тексту, який виходить за межі висоти */
+    text-overflow: ellipsis; /* Точки на кінці, якщо текст не вміщується повністю */
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Обмеження кількості відображуваних ліній тексту до 3 */
+    -webkit-box-orient: vertical;
+}
+
+/*для редагування зображень*/
+.editor-image {
+    display: block; /* Зображення повинно бути блочним елементом */
+    max-width: 100%; /* Максимальна ширина зображення - 100% від контейнера */
+    max-height: 400px; /* Максимальна висота зображення, адаптуйте за потребою */
+    margin: 20px auto; /* Верхній та нижній відступи - 20px, автоматичні лівий та правий відступи для центрування */
+    object-fit: contain; /* Збереження пропорцій зображення, не дозволяючи йому виростати понад свої власні розміри */
+}
+
+/* Стилі для бічної панелі */
+.sidebar {
+    height: 100vh; /* Висота на весь екран */
+    width: 120px; /* Ширина бічної панелі */
+    position: fixed; /* Фіксована позиція */
+    z-index: 1; /* Перебуває над іншими елементами */
+    top: 0; /* Верх бічної панелі */
+    left: 0; /* Лівий край бічної панелі */
+    background-color: #414040; /* Колір фону */
+    overflow-x: hidden; /* Приховуємо горизонтальну прокрутку */
+    padding-top: 20px; /* Відступ зверху */
+}
+
+/* Стилізуємо посилання всередині sidebar, які можуть також мати округлені кути */
+.sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    overflow: hidden; /* Приховуємо текст, який виходить за межі */
+    text-overflow: ellipsis; /* Текст з кінцями у вигляді трьох крапок, якщо він не вміщується */
+    align-items: center;
+    font-size: 12px;
+    color: white;
+    background-color: #484848; /* Колір фону посилань */
+    display: block;
+    border-radius: 15px; /* Округлені кути для посилань */
+    margin: 5px 10px; /* Додаємо невеликий відступ з усіх боків */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Плавна зміна фону та тіні */
+}
+
+/* Стилізуємо посилання при наведенні */
+.sidebar a:hover, .sidebar a.active {
+    background-color: #1abc9c; /* Колір для активного стану або при наведенні */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Тінь для ефекту вибору */
+}
+
+
+/* Стилі для основного контенту */
+.content {
+    margin-left: 120px; /* Відступ зліва, щоб не перекривало sidebar */
+    padding: 1px 16px;
+    height: 100vh;
+
+}
+
+/* Стилі для форми реєстрації */
+#registration-form {
+    width: 300px;
+    margin: auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-group button {
+    width: 100%;
+    padding: 10px;
+    background-color: #1abc9c;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form-group button:hover {
+    background-color: #1abc9c;
+}
+
+/*Стилі для хлібних крихт навігації*/
+.breadcrumbs-container {
+    padding: 10px;
+}
+
+#breadcrumbs {
+    list-style: none;
+    padding: 0;
+}
+
+#breadcrumbs li {
+    display: inline;
+    margin-right: 5px;
+}
+
+#breadcrumbs li:after {
+    content: '>';
+    margin-left: 5px;
+}
+
+#breadcrumbs li:last-child:after {
+    content: '';
+}
+
+#breadcrumbs a {
+    color: #949494;
+    text-decoration: none;
+}
+
+#breadcrumbs a:hover {
+    text-decoration: underline;
+}
+
+/*для розділу "Головна сторінка*/
+#home {
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#home h1, #home h2 {
+    color: #333;
+}
+
+#home p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.features ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.get-started p {
+    background-color: #bee3d4;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/*для категорії "HTML"*/
+#categories {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#categories h2, #categories h3 {
+    color: #333;
+}
+
+#categories p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/*для підрозділу*/
+/* Стилі для секції з оглядом мов програмування */
+.subdivisions {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.subdivisions header,
+.subdivisions article {
+    margin-bottom: 20px;
+}
+
+.subdivisions h1,
+.subdivisions h2 {
+    color: #333;
+}
+
+.subdivisions p {
+    margin-bottom: 10px;
+}
+
+/* Стилі для блоку коду */
+.subdivisions pre {
+    background-color: #eee;
+    border: 1px solid #ddd;
+    border-left: 3px solid #1abc9c;
+    color: #666;
+    page-break-inside: avoid;
+    font-family: monospace;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    max-width: 100%;
+    overflow: auto;
+    padding: 10px 20px;
+    display: block;
+    word-wrap: break-word;
+}
+
+.subdivisions code {
+    font-family: Consolas, "Courier New", Courier, monospace;
+    font-size: .9em;
+}
+
+/* Покращення візуального представлення заголовків та тексту */
+.subdivisions h2 {
+    background-color: #484848;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.subdivisions p {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+
+
+/* Стилі для посилань */
+.subdivisions a {
+    color: #1abc9c;
+    text-decoration: none;
+    border-bottom: 1px solid #1abc9c;
+    transition: border-bottom 0.3s;
+}

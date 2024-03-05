@@ -1,0 +1,78 @@
+<section class="subdivisions">
+    <header>
+        <h1>Структура HTML-документа</h1>
+        <p>Розглянемо базову структуру HTML документа та його основні елементи.</p>
+    </header>
+    <article class="html-structure-overview">
+        <h2>DOCTYPE</h2>
+        <p>Оголошення &lt;!DOCTYPE&gt; - є визначення типу документа, яке допомагає браузерам правильно відображати вебсторінки.
+            Воно повинно з'являтися тільки один раз у верхній частині вебсторінки (перед будь-якими тегами HTML).
+            Оголошення &lt;!DOCTYPE&gt; не чутливе до регістру. Можна писати як великими літерами, так і маленькими.
+            Оголошення &lt;!DOCTYPE&gt; для HTML5 має такий вигляд:</p>
+        <pre>
+<code>&lt;!DOCTYPE html&gt;</code></pre>
+    </article>
+
+    <article class="html-structure-overview">
+        <p>Нижче наведена візуалізація структури HTML-сторінки:</p>
+        <img src="./assets/images/structure-html-doc.png" alt="Structure HTML" class="editor-image">
+    </article>
+
+    <article class="html-structure-overview">
+        <h2>html</h2>
+        <p>Елемент &lt;html&gt; є кореневим елементом HTML сторінки. Всі інші елементи мають бути всередині тегів &lt;html&gt; та &lt;/html&gt;.</p>
+    </article>
+
+    <article class="html-structure-overview">
+        <h2>head</h2>
+        <p>Елемент &lt;head&gt; містить метадані про документ - інформацію про сам документ, а не його вміст.
+            Сюди входять такі елементи:</p>
+        <ul>
+            <li><p>&lt;title&gt; - заголовок сторінки, який відображається в заголовку вікна браузера або на вкладці.</p></li>
+            <li><p>
+                &lt;meta&gt; - метатеги, які містять інформацію про сторінку, таку як кодування, опис, ключові слова, автор, та інше.</p></li>
+            <li><p>
+                &lt;link&gt; - посилання на зовнішні ресурси, такі як CSS-файли, шрифти, та інше.</p></li>
+            <li><p>
+                &lt;style&gt; - внутрішній CSS-код, який використовується для задання стилів для сторінки.</p></li>
+        </ul>
+    </article>
+
+    <article class="html-structure-overview">
+        <h2>body</h2>
+        <p> Елемент &lt;body&gt; містить весь видимий вміст сторінки - текст, зображення, посилання, список, таблиці тощо.</p>
+        <h2>Приклад</h2>
+        <p>Ось приклад простої структури HTML документа:</p>
+        <pre>
+<code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+&lt;title&gt;Заголовок сторінки&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Це заголовок сторінки&lt;/h1&gt;
+        &lt;p&gt;Це параграф з текстом.&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </article>
+
+    <article class="html-structure-overview">
+        <h2>Висновок</h2>
+        <p>Розглянули основні елементи структури HTML документа. Використовуючи правильну семантичну розмітку,
+            ви можете створювати доступні та оптимізовані веб-сторінки.</p>
+    </article>
+
+    <article class="html-structure-overview">
+        <h2>Практичне завдання</h2>
+        <p>Щоб краще зрозуміти структуру HTML документа, спробуйте виконати наступне:</p>
+        <ul>
+            <li><p>Створіть новий HTML файл з ім'ям structure.html</p></li>
+            <li><p>Додайте оголошення DOCTYPE для HTML5</p></li>
+            <li><p>Додайте основні HTML теги &lt;html&gt;, &lt;head&gt;, та &lt;body&gt;</p></li>
+            <li><p>Всередині &lt;head&gt; додайте елемент &lt;title&gt;, який міститиме назву вашої сторінки</p></li>
+            <li><p>Всередині &lt;body&gt; додайте заголовок &lt;h1&gt;, абзац &lt;p&gt;, зображення &lt;img&gt; та посилання &lt;a&gt;</p></li>
+            <li><p>Перегляньте сторінку в браузері та переконайтеся, що вміст відображається правильно</p></li>
+            <li><p>Валідуйте код за допомогою checkValidity та виправте можливі помилки</p></li>
+        </ul>
+    </article>
+</section>

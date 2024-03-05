@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+  <title>ІТ-Посібник</title>
+  <link rel="stylesheet" type="text/css" href="styles/main.css">
+</head>
+<body>
+
+<div class="main-container">
+  <div class="sidebar">
+  <nav>
+    <ul>
+      <li><a class="nav-link" data-section="home" data-main-section="home">Головна</a></li>
+      <li><a class="nav-link" data-section="html-basics" data-main-section="html-basics">HTML</a></li>
+      <li><a class="nav-link" data-section="css-basics" data-main-section="css-basics">CSS</a></li>
+      <li><a class="nav-link" data-section="js-basics" data-main-section="js-basics">JavaScript</a></li>
+      <li><a class="nav-link" data-section="frameworks-and-libraries" data-main-section="frameworks-and-libraries">Фреймворки</a></li>
+      <li><a class="nav-link" data-section="server-side-dev" data-main-section="server-side-dev">Серверна розробка</a></li>
+      <li><a class="nav-link" data-section="web-api" data-main-section="web-api">Web API</a></li>
+      <li><a class="nav-link" data-section="web-app-security" data-main-section="web-app-security"> Безпека додатків</a></li>
+      <li><a class="nav-link" data-section="deployment-and-hosting" data-main-section="deployment-and-hosting">Розгортання та хостинг</a></li>
+
+      <a class="nav-link" data-section="ui-ux" data-main-section="ui-ux">Особистий кабінет</a>
+      <a class="nav-link" data-section="login" data-main-section="login">Вхід</a>
+      <a class="nav-link" data-section="register" data-main-section="register">Реєстрація</a>
+    </ul>
+  </nav>
+    </div>
+  <div class="content">
+
+    <!--це навігація по підрозділам-->
+    <div class="breadcrumbs-container">
+      <ul id="breadcrumbs">
+        <!-- Тут будуть breadcrumbs -->
+      </ul>
+    </div>
+
+<main id="main-content">
+  <!-- Тут буде основний контент -->
+</main>
+    </div>
+</div>
+<footer>
+</footer>
+</body>
+
+<script src="scripts/router.js"></script>
+
+
+
+</html>

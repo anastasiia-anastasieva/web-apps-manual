@@ -1,0 +1,79 @@
+<section class="subdivisions">
+    <header>
+        <h1>Electron</h1>
+        <p>Electron - це фреймворк для створення desktop додатків з використанням HTML, CSS та JavaScript.</p>
+        <img src="./assets/images/electron-js.png" alt="electron" class="editor-image">
+    </header>
+    <article>
+        <h2>Основи Electron</h2>
+        <p>Electron - це фреймворк на основі Node.js та Chromium для створення настільних додатків за допомогою веб-технологій.
+            <br>Основні особливості Electron:</p>
+        <ul>
+            <li><p>Кросплатформовість</p></li>
+            <li><p>Можливості Node.js в додатку</p></li>
+            <li><p>Інтеграція з OS</p></li>
+            <li><p>Нативний користувацький інтерфейс</p></li>
+</ul>
+        <p>Структура додатків складається з:</p>
+        <ul>
+            <li><p><strong>Main процесу</strong> - відповідає за створення вікон, має доступ до OS API. Написаний на Node.js.</p></li>
+            <li><p><strong>Render процесів</strong> - створюють сторінки у вікнах. Використовують HTML, CSS та JS.</p></li>
+        </ul>
+        <pre>
+<code>function Hello() {
+  return &lt;h1&gt;Hello!&lt;/h1&gt;
+}</code></pre>
+        <p>Таким чином ви можете створити кілька вікон з окремими Render процесами для кожного.
+            Між ними відбувається спілкування через IPC (InterProcess Communication).</p>
+        <p>Інтерфейс будується стандартними веб-технологіями (HTML/CSS/JS) в Renderer процесі,
+            в той час як Main процес відповідає за інтеграцію з операційною системою.</p>
+    </article>
+
+    <article>
+        <h2>Перші кроки</h2>
+        <p>Щоб почати створювати Electron додаток вам потрібно встановити Node.js та пройти ініціалізацію проекту через npm init.</p>
+        <p>Далі ви зможете створювати основне файл додатку main.js та html файл для інтерфейсу index.html.
+        <br>Зв'язок між ними відбувається через модуль electron, який дозволяє створювати вікна та керувати життєвим циклом.</p>
+    </article>
+
+    <article>
+        <h2>Розробка інтерфейсу</h2>
+        <p>Інтерфейс в Електроні робиться за допомогою звичайних веб-технологій:</p>
+        <pre><code>const App = () => {
+  return (
+    &lt;Window&gt;
+      &lt;MainMenu /&gt;
+
+      &lt;Content&gt;
+        // UI code
+      &lt;/Content&gt;
+    &lt;/Window&gt;
+  )
+}</code></pre>
+        <p>Тобто React чи інша бібліотека підійде.</p>
+        <p>Electron дозволяє пакувати веб-додатки як повноцінні нативні програми для різних платформ.</p>
+    </article>
+
+    <article>
+        <h2>Практичне завдання</h2>
+        <ul>
+            <li><p>Ініціалізуйте новий проект за допомогою npm init</p></li>
+            <li><p>Встановіть пакети electron та electron-builder через npm</p></li>
+            <li><p>Створіть файл main.js з наступним кодом:</p></li>
+<pre><code>const {app, BrowserWindow} = require('electron')
+
+let win;
+
+app.on('ready', () => {
+  win = new BrowserWindow();
+  win.loadFile('index.html');
+})</code></pre>
+            <li><p>Створіть index.html файл з текстом "Hello World"</p></li>
+            <li><p>Запустіть додаток командою npm start</p></li>
+            <li><p>Спробуйте показати реальне вікно з кнопками за допомогою HTML і CSS</p></li>
+            <li><p>Додайте функціонал взаємодії з вікнами та контентом</p></li>
+            <li><p>Відпрацюйте build та дистрибуцію готового пакету додатку</p></li>
+            <li><p>Опублікуйте додаток в магазині GitHub або іншому</p></li>
+        </ul>
+    </article>
+</section>
