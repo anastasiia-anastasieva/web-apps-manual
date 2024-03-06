@@ -1,6 +1,8 @@
 const { app, BrowserWindow } = require('electron');
 const path = require('path');
 
+
+
 function createWindow() {
   // Створення вікна браузера.
   const mainWindow = new BrowserWindow({
@@ -20,7 +22,7 @@ function createWindow() {
   console.log(cssPath); // Виведіть шлях до консолі для перевірки
 
   // Відкриття DevTools.
- // mainWindow.webContents.openDevTools();
+  mainWindow.webContents.openDevTools();
 }
 
 // Цей метод буде викликаний, коли Electron завершить
